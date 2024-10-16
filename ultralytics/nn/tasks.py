@@ -943,7 +943,7 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
                 args.insert(2, n)  # number of repeats
                 n = 1
 
-        #---------------------------------------注意力机制------------------------
+        #-----------------------------------Attention Mechanism------------------------
         elif m in {BiLevelRoutingAttention, ContextGuidedBlock_Down, MultiDilatelocalAttention, LocalWindowAttention,
                    SELayerV1, SELayerV2, HAT, EMA, MLCA, ACmix, CARAFE, DAttentionBaseline, iRMB_EMA,
                    deformable_LKA_Attention, FocalModulation, FocusedLinearAttention, HAT, iRMB, LSKA, TripletAttention,
@@ -951,8 +951,8 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
                    SPDEMA, ADNet, RIDNET}:
             c2 = ch[f]
             args = [c2, *args]
-        # ---------------------------------------注意力机制-----------------------
-        # ---------------------------------------主干----------------------------
+        #-----------------------------------Attention Mechanism------------------------
+        # ---------------------------------------Backbone----------------------------
         elif m in {vanillanet_5, vanillanet_6, vanillanet_7, vanillanet_8, vanillanet_9, vanillanet_10,
                    repvit_m0_6, repvit_m0_9, repvit_m1_0, repvit_m1_1, repvit_m1_5, repvit_m2_3, LSKNet,
                    LSKNET_Tiny,
@@ -972,9 +972,9 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
                    MobileNetV4HybridMedium, MobileNetV4HybridLarge, pvt_v2_b0, pvt_v2_b1, pvt_v2_b2, pvt_v2_b3, pvt_v2_b4,
                    pvt_v2_b5}:
             m = m(*args)
-            c2 = m.width_list  # 返回通道列表
+            c2 = m.width_list  #Return00000000000000000000000000000000000000000000000000000000000000000000000000000 to Channel List
             backbone = True
-        # ---------------------------------------主干----------------------------
+        # ---------------------------------------Backbone----------------------------
         # -----------------------------GOLD-YOLO--------------------------------
         elif m in (Low_FAM, High_FAM, High_LAF):
             c2 = sum(ch[x] for x in f)
