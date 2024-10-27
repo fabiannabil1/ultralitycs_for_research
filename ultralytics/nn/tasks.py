@@ -954,9 +954,11 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
         #-----------------------------------Attention Mechanism------------------------
         # ---------------------------------------Backbone----------------------------
         elif m in {vanillanet_5, vanillanet_6, vanillanet_7, vanillanet_8, vanillanet_9, vanillanet_10,
-                   repvit_m0_6, repvit_m0_9, repvit_m1_0, repvit_m1_1, repvit_m1_5, repvit_m2_3, LSKNet,
-                   LSKNET_Tiny,
-                   LSKNET_base, SwinTransformer, MobileNetV1, MobileNetV2, MobileNetV3, shufflenet_v1_x0_5,
+                   repvit_m0_6, repvit_m0_9, repvit_m1_0, repvit_m1_1, repvit_m1_5, repvit_m2_3, 
+                   #LSKNet,
+                   #LSKNET_Tiny,
+                   #LSKNET_base, 
+                   SwinTransformer, MobileNetV1, MobileNetV2, MobileNetV3, shufflenet_v1_x0_5,
                    shufflenet_v1_x1_0, shufflenet_v1_x1_5, shufflenet_v1_x2_0, shufflenetv2, revcol_small,
                    revcol_tiny,
                    revcol_base, revcol_xlarge, revcol_large, efficient, efficientnet_v2, FasterNet,
