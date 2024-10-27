@@ -1,5 +1,5 @@
 # Ultralytics YOLO 🚀, AGPL-3.0 license
-from .Addmodules import *
+from ultralytics.nn.Addmodules import *
 import contextlib
 from copy import deepcopy
 from pathlib import Path
